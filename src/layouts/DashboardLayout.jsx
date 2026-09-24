@@ -68,7 +68,7 @@ function DashboardLayout() {
               }
               onClick={() => setSidebarOpen(false)}
             >
-              <span>🏠</span>
+              
               <span>Dashboard</span>
             </NavLink>
 
@@ -79,7 +79,7 @@ function DashboardLayout() {
               }
               onClick={() => setSidebarOpen(false)}
             >
-              <span>👤</span>
+              
               <span>Profile</span>
             </NavLink>
 
@@ -90,7 +90,7 @@ function DashboardLayout() {
               }
               onClick={() => setSidebarOpen(false)}
             >
-              <span>🔒</span>
+              
               <span>Change Password</span>
             </NavLink>
 
@@ -102,7 +102,7 @@ function DashboardLayout() {
               className="logout-button"
               onClick={handleLogout}
             >
-              <span>🚪</span>
+              
               <span>Logout</span>
             </button>
 
