@@ -1,45 +1,24 @@
-/* =========================================================
-   GLOBAL RESET
-   Used to remove default browser spacing and make sizing
-   consistent throughout the application.
-========================================================= */
-
+/* Global reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-/* =========================================================
-   BODY
-   Used for the main application font and page background.
-========================================================= */
-
+/* Main application styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f7fb;
   color: #222;
 }
 
-
-/* =========================================================
-   FORM ELEMENTS
-   Makes buttons and inputs use the same font as the body.
-========================================================= */
-
+/* Form elements */
 button,
 input {
   font-family: inherit;
 }
 
-
-/* =========================================================
-   COMMON BUTTON
-   Used by the reusable Button.jsx component.
-   Used in Login, Register, Reset Password, etc.
-========================================================= */
-
+/* Common button */
 .common-button {
   width: 100%;
   padding: 12px 16px;
@@ -52,34 +31,19 @@ input {
   transition: 0.3s;
 }
 
-
-/* Button hover effect */
-
 .common-button:hover {
   background-color: #1d4ed8;
 }
-
-
-/* Button disabled state used during loading */
 
 .common-button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-
-/* =========================================================
-   INPUT GROUP
-   Used for labels and input fields in the reusable Input.jsx
-   component.
-========================================================= */
-
+/* Input group */
 .input-group {
   margin-bottom: 16px;
 }
-
-
-/* Input label */
 
 .input-group label {
   display: block;
@@ -87,9 +51,6 @@ input {
   font-size: 14px;
   font-weight: 600;
 }
-
-
-/* Normal input field */
 
 .input-group input {
   width: 100%;
@@ -100,34 +61,20 @@ input {
   font-size: 15px;
 }
 
-
-/* Input focus effect */
-
 .input-group input:focus {
   border-color: #2563eb;
 }
 
-
-/* =========================================================
-   PASSWORD INPUT
-   Used when Input.jsx receives type="password".
-========================================================= */
-
+/* Password input wrapper */
 .input-wrapper {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-
-/* Adds space on the right for the Show/Hide button */
-
 .input-wrapper input {
   padding-right: 65px;
 }
-
-
-/* Password Show/Hide button */
 
 .password-toggle {
   position: absolute;
@@ -139,19 +86,11 @@ input {
   cursor: pointer;
 }
 
-
-/* Password Show/Hide hover effect */
-
 .password-toggle:hover {
   color: #1d4ed8;
 }
 
-
-/* =========================================================
-   AUTHENTICATION PAGE
-   Used by Login, Register, Forgot Password and Reset Password.
-========================================================= */
-
+/* Authentication page */
 .auth-page {
   min-height: 100vh;
   display: flex;
@@ -161,9 +100,7 @@ input {
   background: #f5f7fb;
 }
 
-
 /* Authentication card */
-
 .auth-card {
   width: 100%;
   max-width: 420px;
@@ -174,38 +111,21 @@ input {
   animation: fadeIn 0.4s ease;
 }
 
-
-/* =========================================================
-   AUTHENTICATION HEADER
-   Used for Login, Register and password pages.
-========================================================= */
-
 .auth-header {
   text-align: center;
   margin-bottom: 25px;
 }
-
-
-/* Authentication page heading */
 
 .auth-header h1 {
   margin-bottom: 8px;
   font-size: 28px;
 }
 
-
-/* Authentication page description */
-
 .auth-header p {
   color: #6b7280;
 }
 
-
-/* =========================================================
-   ERROR MESSAGE
-   Used when login, registration or password validation fails.
-========================================================= */
-
+/* Error message */
 .error-message {
   margin-bottom: 18px;
   padding: 12px;
@@ -215,12 +135,7 @@ input {
   font-size: 14px;
 }
 
-
-/* =========================================================
-   LOGIN OPTIONS
-   Used for Remember Me and Forgot Password.
-========================================================= */
-
+/* Login options */
 .login-options {
   display: flex;
   justify-content: space-between;
@@ -229,9 +144,6 @@ input {
   font-size: 14px;
 }
 
-
-/* Remember Me checkbox and text */
-
 .remember-option {
   display: flex;
   align-items: center;
@@ -239,15 +151,9 @@ input {
   cursor: pointer;
 }
 
-
-/* Remember Me checkbox */
-
 .remember-option input {
   cursor: pointer;
 }
-
-
-/* Authentication links */
 
 .login-options a,
 .auth-footer a {
@@ -255,19 +161,10 @@ input {
   text-decoration: none;
 }
 
-
-/* Authentication link hover */
-
 .login-options a:hover,
 .auth-footer a:hover {
   text-decoration: underline;
 }
-
-
-/* =========================================================
-   AUTHENTICATION FOOTER
-   Used for Login/Register navigation links.
-========================================================= */
 
 .auth-footer {
   margin-top: 22px;
@@ -276,12 +173,7 @@ input {
   font-size: 14px;
 }
 
-
-/* =========================================================
-   FADE IN ANIMATION
-   Used by the authentication card when the page loads.
-========================================================= */
-
+/* Page entrance animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -294,22 +186,12 @@ input {
   }
 }
 
-
-/* =========================================================
-   REGISTER PAGE
-   Makes the registration card slightly wider than Login.
-========================================================= */
-
+/* Register page */
 .register-card {
   max-width: 460px;
 }
 
-
-/* =========================================================
-   PASSWORD REQUIREMENTS
-   Used on Register and Reset Password pages.
-========================================================= */
-
+/* Password requirements */
 .password-info {
   margin-bottom: 20px;
   padding: 12px;
@@ -319,34 +201,20 @@ input {
   font-size: 13px;
 }
 
-
-/* Password requirements heading */
-
 .password-info p {
   font-weight: 600;
   margin-bottom: 6px;
 }
 
-
-/* Password requirements list */
-
 .password-info ul {
   padding-left: 20px;
 }
-
-
-/* Password requirement items */
 
 .password-info li {
   margin-bottom: 3px;
 }
 
-
-/* =========================================================
-   PROTECTED ROUTE LOADING
-   Used by ProtectedRoute.jsx while AuthContext is loading.
-========================================================= */
-
+/* Protected route loading */
 .loading-page {
   min-height: 100vh;
   display: flex;
@@ -356,23 +224,13 @@ input {
   color: #1e293b;
 }
 
-
-/* =========================================================
-   DASHBOARD LAYOUT
-   Main wrapper for the protected dashboard area.
-========================================================= */
-
+/* Dashboard layout */
 .dashboard-layout {
   min-height: 100vh;
   background-color: #f8fafc;
 }
 
-
-/* =========================================================
-   DASHBOARD NAVBAR
-   Top navigation bar of the dashboard.
-========================================================= */
-
+/* Dashboard navbar */
 .dashboard-navbar {
   height: 70px;
   background-color: white;
@@ -386,29 +244,17 @@ input {
   z-index: 100;
 }
 
-
-/* Left side of navbar */
-
 .navbar-left {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-
-/* Dashboard title */
-
 .navbar-left h2 {
   margin: 0;
   color: #1e293b;
   font-size: 21px;
 }
-
-
-/* =========================================================
-   MOBILE MENU BUTTON
-   Hidden on desktop and displayed on smaller screens.
-========================================================= */
 
 .menu-button {
   display: none;
@@ -418,20 +264,11 @@ input {
   cursor: pointer;
 }
 
-
-/* =========================================================
-   NAVBAR USER
-   Displays logged-in user's avatar, name and email.
-========================================================= */
-
 .navbar-user {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
-
-/* User avatar */
 
 .user-avatar {
   width: 42px;
@@ -446,47 +283,27 @@ input {
   font-size: 18px;
 }
 
-
-/* User name and email container */
-
 .navbar-user-info {
   display: flex;
   flex-direction: column;
 }
-
-
-/* User name */
 
 .navbar-user-info strong {
   color: #1e293b;
   font-size: 14px;
 }
 
-
-/* User email */
-
 .navbar-user-info span {
   color: #64748b;
   font-size: 12px;
 }
-
-
-/* =========================================================
-   DASHBOARD BODY
-   Contains the sidebar and main dashboard content.
-========================================================= */
 
 .dashboard-body {
   display: flex;
   min-height: calc(100vh - 70px);
 }
 
-
-/* =========================================================
-   SIDEBAR
-   Left navigation area of the dashboard.
-========================================================= */
-
+/* Dashboard sidebar */
 .dashboard-sidebar {
   width: 240px;
   background-color: white;
@@ -497,17 +314,11 @@ input {
   padding: 20px 12px;
 }
 
-
-/* Sidebar navigation links container */
-
 .sidebar-navigation {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-
-
-/* Individual sidebar link */
 
 .sidebar-link {
   display: flex;
@@ -521,16 +332,10 @@ input {
   transition: 0.2s;
 }
 
-
-/* Sidebar link hover */
-
 .sidebar-link:hover {
   background-color: #f1f5f9;
   color: #1e293b;
 }
-
-
-/* Active sidebar link */
 
 .sidebar-link.active {
   background-color: #eff6ff;
@@ -538,19 +343,10 @@ input {
   font-weight: 600;
 }
 
-
-/* =========================================================
-   SIDEBAR LOGOUT AREA
-   Places the Logout button at the bottom of the sidebar.
-========================================================= */
-
 .sidebar-bottom {
   border-top: 1px solid #e2e8f0;
   padding-top: 15px;
 }
-
-
-/* Logout button */
 
 .logout-button {
   width: 100%;
@@ -567,45 +363,25 @@ input {
   text-align: left;
 }
 
-
-/* Logout hover effect */
-
 .logout-button:hover {
   background-color: #fef2f2;
 }
 
-
-/* =========================================================
-   DASHBOARD MAIN AREA
-   Holds the current page displayed by React Router Outlet.
-========================================================= */
-
+/* Dashboard main area */
 .dashboard-main {
   flex: 1;
   padding: 30px;
   overflow-x: hidden;
 }
 
-
-/* Dashboard content width */
-
 .dashboard-content {
   max-width: 1100px;
   margin: 0 auto;
 }
 
-
-/* =========================================================
-   DASHBOARD PAGE HEADER
-   Used for Dashboard title and description.
-========================================================= */
-
 .page-header {
   margin-bottom: 25px;
 }
-
-
-/* Dashboard heading */
 
 .page-header h1 {
   margin: 0 0 8px;
@@ -613,19 +389,10 @@ input {
   font-size: 30px;
 }
 
-
-/* Dashboard description */
-
 .page-header p {
   margin: 0;
   color: #64748b;
 }
-
-
-/* =========================================================
-   WELCOME CARD
-   Displays the logged-in user's welcome message.
-========================================================= */
 
 .welcome-card {
   background-color: white;
@@ -635,36 +402,22 @@ input {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-
-/* Welcome heading */
-
 .welcome-card h2 {
   margin: 0 0 8px;
   color: #1e293b;
 }
-
-
-/* Welcome description */
 
 .welcome-card p {
   margin: 0;
   color: #64748b;
 }
 
-
-/* =========================================================
-   DASHBOARD INFORMATION GRID
-   Displays account information cards.
-========================================================= */
-
+/* Dashboard information grid */
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
-
-
-/* Individual account information card */
 
 .info-card {
   background-color: white;
@@ -673,17 +426,11 @@ input {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-
-/* Information card title */
-
 .info-card h3 {
   margin: 0 0 8px;
   color: #64748b;
   font-size: 14px;
 }
-
-
-/* Information card value */
 
 .info-card p {
   margin: 0;
@@ -692,22 +439,11 @@ input {
   font-weight: 600;
 }
 
-
-/* =========================================================
-   RESPONSIVE DASHBOARD
-   Applies when screen width is 768px or smaller.
-========================================================= */
-
 @media (max-width: 768px) {
-
-  /* Show hamburger menu on mobile */
 
   .menu-button {
     display: block;
   }
-
-
-  /* Hide sidebar outside the screen */
 
   .dashboard-sidebar {
     position: fixed;
@@ -718,88 +454,185 @@ input {
     transition: left 0.3s ease;
   }
 
-
-  /* Show sidebar when menu button is clicked */
-
   .dashboard-sidebar.sidebar-open {
     left: 0;
   }
-
-
-  /* Main dashboard takes full width */
 
   .dashboard-main {
     width: 100%;
     padding: 20px;
   }
 
-
-  /* Stack dashboard cards vertically */
-
   .dashboard-grid {
     grid-template-columns: 1fr;
   }
-
-
-  /* Hide email/name details in navbar */
 
   .navbar-user-info {
     display: none;
   }
 }
 
-
-/* =========================================================
-   SMALL MOBILE DEVICES
-   Additional adjustments for screens 500px or smaller.
-========================================================= */
-
 @media (max-width: 500px) {
-
-  /* Reduce navbar side spacing */
 
   .dashboard-navbar {
     padding: 0 15px;
   }
 
-
-  /* Reduce dashboard title size */
-
   .navbar-left h2 {
     font-size: 18px;
   }
 
-
-  /* Reduce dashboard content spacing */
-
   .dashboard-main {
     padding: 15px;
   }
-
-
-  /* Reduce page heading size */
 
   .page-header h1 {
     font-size: 25px;
   }
 }
 
-/* =========================================================
-   CHANGE PASSWORD PAGE
-   Main container for the Change Password page.
-========================================================= */
+/* Profile page */
+.profile-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
+/* Profile card */
+.profile-card {
+  max-width: 700px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Profile header */
+.profile-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/* Profile avatar */
+.profile-avatar {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* Profile header text */
+.profile-card-header h2 {
+  margin: 0 0 5px;
+  color: #1e293b;
+}
+
+.profile-card-header p {
+  margin: 0;
+  color: #64748b;
+}
+
+/* Profile details */
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Individual profile detail */
+.profile-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Profile detail label */
+.profile-detail span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Profile detail value */
+.profile-detail strong {
+  color: #1e293b;
+  font-size: 15px;
+}
+
+/* Profile actions */
+.profile-actions {
+  margin-top: 10px;
+}
+
+.profile-actions .common-button {
+  width: 100%;
+}
+
+/* Profile form */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Profile form actions */
+.profile-form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 5px;
+}
+
+.profile-form-actions .common-button,
+.cancel-button {
+  flex: 1;
+}
+
+/* Cancel button */
+.cancel-button {
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: white;
+  color: #374151;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #f8fafc;
+}
+
+/* Profile responsive design */
+@media (max-width: 600px) {
+  .profile-card {
+    padding: 20px;
+  }
+
+  .profile-detail {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .profile-form-actions {
+    flex-direction: column;
+  }
+}
+
+/* Change password page */
 .change-password-page {
   max-width: 900px;
   margin: 0 auto;
 }
 
-
-/* =========================================================
-   CHANGE PASSWORD CARD
-   White container containing the password form.
-========================================================= */
-
+/* Change password card */
 .change-password-card {
   max-width: 600px;
   background-color: white;
@@ -807,11 +640,6 @@ input {
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
-
-
-/* =========================================================
-   CHANGE PASSWORD RESPONSIVE DESIGN
-========================================================= */
 
 @media (max-width: 600px) {
 
@@ -821,12 +649,7 @@ input {
 
 }
 
-
-/* =========================================
-   TOAST NOTIFICATIONS
-   ========================================= */
-
-/* Toast container */
+/* Toast notifications */
 .toast-container {
   position: fixed;
   top: 24px;
@@ -854,14 +677,12 @@ input {
   animation: toastSlideIn 0.3s ease;
 }
 
-/* Toast content */
 .toast-content {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* Toast icon */
 .toast-icon {
   width: 28px;
   height: 28px;
@@ -895,14 +716,13 @@ input {
   color: #dc2626;
 }
 
-/* Toast message */
 .toast-message {
   font-size: 14px;
   color: #333333;
   line-height: 1.4;
 }
 
-/* Close button */
+/* Toast close button */
 .toast-close {
   border: none;
   background: transparent;
@@ -931,7 +751,6 @@ input {
   }
 }
 
-/* Mobile toast */
 @media (max-width: 600px) {
   .toast-container {
     top: 16px;
