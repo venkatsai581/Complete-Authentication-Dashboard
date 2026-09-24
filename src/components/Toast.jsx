@@ -3,7 +3,7 @@ function Toast({ message, type, onClose }) {
     <div className={`toast toast-${type}`}>
       <div className="toast-content">
         <span className="toast-icon">
-          {type === "success" ? "Success" : "Error"}
+          {type === "success" ? "OK" : "!"}
         </span>
 
         <span className="toast-message">
@@ -16,7 +16,7 @@ function Toast({ message, type, onClose }) {
         className="toast-close"
         onClick={onClose}
       >
-        X
+        x
       </button>
     </div>
   );
